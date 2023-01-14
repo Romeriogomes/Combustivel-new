@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
+        
+        
+
+    </script>
+    <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+
+       <title>Gas Km</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                
+            }
+
+            
+            .fundo{
+            font-size: 10PX;
+            background-image: linear-gradient(rgb(86, 230, 86));
+            color: white;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            height: 100vh;
+            text-align: center;
+            background-image: url(index.jpg);
+            background-size: cover;
+            
+            }
+            .Gas_Km {
+                opacity: 0,095;
+            }
+            .Gas_Km{ 
+            font-size: 10px;
+            color: rgb(246, 246, 252);
+            border: rgb(243, 243, 5);
+            text-shadow: rgb(65, 5, 5);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            width: 185px;
+            position: absolute;
+            background-color: rgba(214, 205, 205, 0.5);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            padding: 50px;
+
+            }
+           
+            .botao{
+           
+           width: 182px;
+           height: 60px;
+           font-size: 15px;
+           text-align: center;
+           cursor: pointer;
+           background-color: rgb(150, 6, 6);
+           border: none;
+           color: #fff;
+           border-radius: 5px;
+           transition: transform 1s;
+           transform: translateX(5) scale(0.2);
+           font-style: unset;
+                
+        
+        }
+        .botao:hover,
+        .botao:focus {
+            
+          transform: translateX(10px) scale(0.9);
+        }
+     
+        
+        
+        #gif{
+            background-image: url(Posto.jpg);
+        }
+
+        #fieldset{
+            width: 30%;
+        }
+        
+        .input{
+            size: 3px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            padding: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: rgb(97, 7, 7);
+            
+        }
+        #Gasolina{
+            
+            width: 85PX;
+            height: 25px;
+            border: none;
+            border-radius: 5px;
+            
+        }
+        #Alcool{
+            
+            width: 85px;
+            height: 25px;
+            border: none;
+            border-radius: 5px;
+            
+        }
+        .carros{
+            width: 1px;
+            height: 1px;
+            color: brown;
+            border: 13px;
+            border-radius: 10px;
+        }
+        #Tipos{
+            color: brown;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+        color: aqua;
+        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+        }
+      
+    </style>
+
+    
+  </head>
+<body>
+    <script>
+        
+function Alerta(){
+      textalerta = document.getElementById('value').value 
+      PreçoGasolina = document.getElementById('Gasolina').value
+      PreçoAlcool = document.getElementById('Alcool').value
+     
+        switch (textalerta) {
+        case 'Vw_Up':
+        kmPorLitroGasup = 18.95;
+        KmPorLitroAlcup = 12.5;
+        KmGas= PreçoGasolina / kmPorLitroGasup;
+        KmAlc= PreçoAlcool /KmPorLitroAlcup;
+        if(KmGas<KmAlc){
+            Swal.fire({ 
+                title: 'Gasolina',
+                text: 'Menor custo P/Km',
+                imageUrl: 'https://comb.io/zEPfFl.gif',
+                imageWidth: 280,
+                imageHeight: 130,
+                padding: '0,1 em',
+                width:200,
+                }
+            )
+        }
+        else{
+            Swal.fire({
+                  text: 'Menor custo P/Km',
+                title: 'Alcool',
+                imageUrl: 'https://media.tenor.com/VmGvm8MzU1cAAAAd/homer-oregon-gas.gif',
+                imageWidth: 280,
+                imageHeight: 130,
+                padding: '3 em',
+                width:200,
+            }
+            
+        )
+        }
+        break;
+        case 'Jeep_Renegate':
+        kmPorLitroGasup = 10.9;
+        KmPorLitroAlcup = 7.6;
+        KmGas= PreçoGasolina / kmPorLitroGasup;
+        KmAlc= PreçoAlcool /KmPorLitroAlcup;
+        if(KmGas<KmAlc){
+            Swal.fire({ 
+                title: 'Gasolina',
+                text: 'Menor custo P/Km',
+                imageUrl: 'https://comb.io/zEPfFl.gif',
+                imageWidth: 280,
+                imageHeight: 130,
+                padding: '0,1 em',
+                width:200,
+                }
+            )
+        }
+        else{
+            Swal.fire({
+                  text: 'Menor custo P/Km',
+                title: 'Alcool',
+                imageUrl: 'https://media.tenor.com/VmGvm8MzU1cAAAAd/homer-oregon-gas.gif',
+                imageWidth: 280,
+                imageHeight: 130,
+                padding: '3 em',
+                width:200,
+            }
+            
+        )
+        }
+
+        break;
+        case 'Ford_Fiesta':
+        kmPorLitroGasup = 14.6;
+        KmPorLitroAlcup = 10;
+        KmGas= PreçoGasolina / kmPorLitroGasup;
+        KmAlc= PreçoAlcool /KmPorLitroAlcup;
+        if(KmGas<KmAlc){
+            Swal.fire({ 
+                title: 'Gasolina',
+                text: 'Menor custo P/Km',
+                imageUrl: 'https://comb.io/zEPfFl.gif',
+                imageWidth: 280,
+                imageHeight: 130,
+                padding: '0,1 em',
+                width:200,
+                }
+            )
+        }
+        else{
+            Swal.fire({
+                  text: 'Menor custo P/Km',
+                title: 'Alcool',
+                imageUrl: 'https://media.tenor.com/VmGvm8MzU1cAAAAd/homer-oregon-gas.gif',
+                imageWidth: 280,
+                imageHeight: 130,
+                padding: '3 em',
+                width:200,
+            }
+            
+        )
+        }
+        break;
+        case 'Fiat_Siena':
+        kmPorLitroGasup = 14.4;
+        KmPorLitroAlcup = 9.7;
+        KmGas= PreçoGasolina / kmPorLitroGasup;
+        KmAlc= PreçoAlcool /KmPorLitroAlcup;
+        if(KmGas<KmAlc){
+            Swal.fire({ 
+                title: 'Gasolina',
+                text: 'Menor custo P/Km',
+                imageUrl: 'https://comb.io/zEPfFl.gif',
+                imageWidth: 280,
+                imageHeight: 130,
+                padding: '0,1 em',
+                width:200,
+                }
+            )
+        }
+        else{
+            Swal.fire({
+                  text: 'Menor custo P/Km',
+                title: 'Alcool',
+                imageUrl: 'https://media.tenor.com/VmGvm8MzU1cAAAAd/homer-oregon-gas.gif',
+                imageWidth: 280,
+                imageHeight: 130,
+                padding: '3 em',
+                width:200,
+            }
+            
+        )
+        }
+        break;
+        }
+    }
+    function atualizar(){
+    var select = document.getElementById('resultadoCar');
+	 option = select.options[select.selectedIndex];
+     document.getElementById('value').value = option.value;
+     document.getElementById('text').value = option.text;
+   
+
+    }
+    </script>   
+    <div class="fundo">
+        
+             <div class="Gas_Km">
+                <h1> Gasolina x Alcool</h1>
+                <br><br>
+                <form class="carros">
+                   
+                    <select id="resultadoCar"name="Tipos" onChange=atualizar()>
+                        <option value="">Selecione seu carro</option>
+                        <option value="Vw_Up">Vw 'Up</option>
+                        <option value="Jeep_Renegate">Jeep Renegate</option>
+                        <option value="Ford_Fiesta">Ford Fiesta</option>
+                        <option value="Fiat_Siena">Fiat Siena</option>
+                    </select>
+                    <input type="text" id="value" style="display: none;">
+		            
+                </form>
+                <br><br>
+                <br><br>
+            
+                <br><br>
+                <div class="input">
+                        <div class="input1">
+                            <label for="nome">R$ Gassolina</label><p><br></p>
+                            <input texto="text" name="gas" id="Gasolina">
+                        </div>                    
+                        <div class="input2">
+                            <label for="nome">R$ Alcool</label><p><br></p>
+                            <input texto="text" name="alc" id="Alcool">
+                        </div>
+                        
+                    </fieldset>
+                    </div>
+                    <p><br><br></p>
+                    <table>
+                    <tr>
+                        <td><button class="botao"onclick="Alerta()">Calcular</button></td>
+                       </tr>
+                    </table>
+                               
+    </div>
+    
+</div>
+                
+ 
+        </div>
+</body>
+
+</html>
