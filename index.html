@@ -147,8 +147,9 @@
 function Alerta(){
       textalerta = document.getElementById('value').value 
       PreçoGasolina = document.getElementById('Gasolina').value
+      PreçoGasolina = PreçoGasolina.replace(',','.');
       PreçoAlcool = document.getElementById('Alcool').value
-     
+      PreçoAlcool = PreçoAlcool.replace(',','.');
         switch (textalerta) {
         case 'Vw_Up':
         kmPorLitroGasup = 18.95;
